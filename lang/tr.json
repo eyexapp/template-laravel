@@ -1,0 +1,14 @@
+{
+    "auth.registered": "Kayıt başarılı.",
+    "auth.login_success": "Giriş başarılı.",
+    "auth.logged_out": "Çıkış başarılı.",
+    "auth.failed": "Girilen bilgiler kayıtlarımızla eşleşmiyor.",
+    "errors.not_found": "İstenen kaynak bulunamadı.",
+    "errors.unauthorized": "Kimlik doğrulaması gereklidir.",
+    "errors.forbidden": "Bu işlemi gerçekleştirme yetkiniz yok.",
+    "errors.validation": "Girilen veriler geçersiz.",
+    "errors.internal": "Beklenmeyen bir hata oluştu.",
+    "messages.created": "Kaynak başarıyla oluşturuldu.",
+    "messages.updated": "Kaynak başarıyla güncellendi.",
+    "messages.deleted": "Kaynak başarıyla silindi."
+}

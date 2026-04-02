@@ -1,0 +1,14 @@
+{
+    "auth.registered": "Registration successful.",
+    "auth.login_success": "Login successful.",
+    "auth.logged_out": "Logged out successfully.",
+    "auth.failed": "These credentials do not match our records.",
+    "errors.not_found": "The requested resource was not found.",
+    "errors.unauthorized": "Authentication is required.",
+    "errors.forbidden": "You do not have permission to perform this action.",
+    "errors.validation": "The given data was invalid.",
+    "errors.internal": "An unexpected error occurred.",
+    "messages.created": "Resource created successfully.",
+    "messages.updated": "Resource updated successfully.",
+    "messages.deleted": "Resource deleted successfully."
+}

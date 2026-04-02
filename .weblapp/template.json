@@ -1,0 +1,49 @@
+{
+  "name": "laravel",
+  "displayName": "Laravel",
+  "description": "Laravel PHP framework with Eloquent ORM, Blade templating, and artisan CLI",
+  "category": "fullstack",
+  "language": "php",
+  "framework": "laravel",
+  "stack": ["php", "laravel", "eloquent", "blade", "mysql", "redis"],
+  "features": ["mvc", "orm", "authentication", "migrations", "queue", "artisan-cli"],
+  "commands": {
+    "dev": "php artisan serve",
+    "build": "npm run build",
+    "test": "php artisan test",
+    "lint": "./vendor/bin/pint"
+  },
+  "packageManager": "composer",
+  "ci": {
+    "workflowTemplate": "laravel",
+    "runner": "ubuntu-latest",
+    "runtime": {
+      "name": "php",
+      "version": "8.3",
+      "setup": "shivammathur/setup-php@v2",
+      "cache": "composer"
+    },
+    "services": {
+      "mysql": {
+        "image": "mysql:8",
+        "env": {
+          "MYSQL_ROOT_PASSWORD": "test",
+          "MYSQL_DATABASE": "test_db"
+        },
+        "ports": ["3306:3306"],
+        "options": "--health-cmd=\"mysqladmin ping\" --health-interval=10s --health-timeout=5s --health-retries=5"
+      },
+      "redis": {
+        "image": "redis:7",
+        "ports": ["6379:6379"],
+        "options": "--health-cmd=\"redis-cli ping\" --health-interval=10s --health-timeout=5s --health-retries=5"
+      }
+    },
+    "steps": {
+      "install": "composer install --no-interaction --prefer-dist",
+      "build": "npm run build",
+      "test": "php artisan test",
+      "lint": "./vendor/bin/pint --test"
+    }
+  }
+}

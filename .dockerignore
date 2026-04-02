@@ -1,0 +1,11 @@
+vendor/
+node_modules/
+.env
+.env.backup
+storage/*.key
+storage/logs/
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+docker-compose.override.yml
+.phpunit.result.cache
